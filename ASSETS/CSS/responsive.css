@@ -328,12 +328,12 @@
 
     .content-started h1 {
         position: relative;
-        top: -140px;
-        width: 340px;
+        top: -146px;
+        width: 92%;
         font-size: 40px;
         text-align: center;
         margin: 0 auto;
-        padding: 40px 0;
+        padding: 13% 0;
         border-radius: 300px 300px 0 0;
     }
 
@@ -398,7 +398,7 @@
         text-align: center;
     }
 
-    .content-About .content-About__information li{
+    .content-information li{
         width: 90%;
         margin: 0;
         line-height: 36px;
@@ -417,11 +417,23 @@
     }
 
     
+    
+    /* Contact */
+    .content-Contact>div:last-child{
+        flex-direction: column;
+    }
 
+    .content-Contact form{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20%;
+    }
 
+    .content-Contact>div:last-child>div{
+        width: 100%;
+        padding: 6% 0;
 
-
-
+    }
 
 
 
