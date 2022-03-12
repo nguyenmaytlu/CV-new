@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home1</title>
+
+    <!-- reset-->
+    <link rel="stylesheet" href="./ASSETS/CSS/reset.css">
+
+    <!-- font chữ -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
+
+    <!-- fontawesome-icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!--  CSS ND-->
+    <link rel="stylesheet" href="./ASSETS/CSS/main.css">
+
+    <!-- responsive -->
+    <link rel="stylesheet" href="./ASSETS/CSS/responsive.css">
+
+
+</head>
+
+<body>
+
+    <!-- background-animations-->
+    <div class="background-animations">
+        <div>
+            <div class="col-1"></div>
+            <div class="col-2"></div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+
+    <!-- click navbar-menu-mobile -->
+    <script>
+        $(document).ready(function () {
+            $('.navbar-menu-mobile').click(function () {
+                $('.navbar-list').slideToggle();
+                // $('#navbar').slideToggle();
+            })
+        })
+    </script>
+
+    <!-- header -->
+    <header class="header">
+        <nav class="navbar" id="navbar">
+            <div class="navbar-logo">
+                <a href="#">
+                    <img src="./ASSETS/IMAGE/logo.png" alt="logo">
+                    <span>Joé <br> Wilson</span>
+                </a>
+            </div>
+            <ul class="navbar-list" id="navbar__menu-list">
+                <li class="navbar-item">
+                    <a href="index.html" class="navbar__item-link">HOME<i class="fa-solid fa-angle-down"></i></a>
+                    <ul>
+                        <li><a href="home1.html">HOME 1</a></li>
+                        <li><a href="">HOME 2</a></li>
+                        <li><a href="">HOME 3</a></li>
+                    </ul>
+                </li>
+                <li class="navbar-item">
+                    <a href="#ABOUT" class="navbar__item-link">ABOUT</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="navbar__item-link">RESUME</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="navbar__item-link">PORTFOLIO</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#CONTACT" class="navbar__item-link">CONTACT</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="navbar__item-link">DOWNLOAD CV<i class="fa-solid fa-download"></i></a>
+                </li>
+            </ul>
+            <div class="navbar-menu-mobile">
+                <a href="#"><i class="fa-solid fa-bars"></i></a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- wrapper -->
+    <div class="wrapper">
+
+        <!-- background -->
+        <div class="wrapper__background">
+            <img src="./ASSETS/IMAGE/man.jpg" alt="">
+        </div>
+
+        <!-- wrapper__started -->
+        <div class="wrapper__container-1">
+            <div class="content-started">
+
+                <h1>Joé <br> Wilson</h1>
+
+                <div class="content-started__list-1">
+                    <span style>Programmer</span>
+                    <div class="content-started__text">
+                        Hello! I am Web Developer from United States, New York. I have rich experience in web site
+                        design and building, also I am good at wordpress. I love to talk with you about our unique.
+                    </div>
+
+                    <div class="content-started__button">
+                        <a href="">
+                            CONTACT ME
+                            <i class="fa-solid fa-angle-right"></i>
+                        </a>
+                        <a href=""><i class="fa-solid fa-angle-down"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- About me -->
+        <div id="ABOUT" class="wrapper__container">
+            <div class="content-About">
+                <div class="content-title">
+                    <h1>About Me</h1>
+                    <div>MY STORY</div>
+                </div>
+
+                <div class="content-About__text">
+                    <div class="content-About__text-1">
+                        <div>
+                            Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue
+                            blandit nunc, eu sollicitudin urna dolor sagittis lacus.
+                        </div>
+
+                        <div>
+                            Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue
+                            blandit nunc, eu sollicitudin urna dolor sagittis lacus.
+                        </div>
+                    </div>
+
+                    <div class="content-About__text-2">
+                        Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue
+                        blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec elit libero, sodales nec,
+                        volutpat a, suscipit non, turpis.
+                    </div>
+                </div>
+
+                <div class="content-information">
+                    <ul>
+                        <li><strong>AGE :</strong>24</li>
+                        <li><strong>RESIDENCE :</strong>USA</li>
+                        <li><strong>FREELANCE :</strong>Available</li>
+                        <li><strong>ADDRESS :</strong>San Francisco</li>
+                        <li><strong>PHONE :</strong>+1256 254 84 56</li>
+                        <li><strong>E-MAIL :</strong>alejandroa@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Services -->
+        <div class="wrapper__container">
+            <div class="content-services">
+                <div class="content-title">
+                    <h1>Services</h1>
+                    <div>WHAT I DO</div>
+                </div>
+
+                <div class="content-text">
+                    <div>
+                        <div class="content-element">
+                            <div class="content-services__icon">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <div class="content-name">
+                                Economic <br>
+                                Science
+                            </div>
+                            <div class="content-explain">
+                                Economics is a social science concerned with the production, consumption of goods and
+                                services.
+                            </div>
+                        </div>
+
+                        <div class="content-element">
+                            <div class="content-services__icon">
+                                <i class="fa-solid fa-rectangle-ad"></i>
+                            </div>
+                            <div class="content-name">
+                                Marketing <br>
+                                & Advertising
+                            </div>
+                            <div class="content-explain">
+                                Advertising Management though is a complex process of employing various media to sell a
+                                product or service.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="content-element">
+                            <div class="content-services__icon">
+                                <i class="fa-brands fa-chrome"></i>
+                            </div>
+                            <div class="content-name">
+                                Web <br>
+                                Development
+                            </div>
+                            <div class="content-explain">
+                                The web development process includes: web design, web content, client-side / server-side
+                                scripting and
+                                network security configuration.
+                            </div>
+                        </div>
+
+                        <div class="content-element">
+                            <div class="content-services__icon">
+                                <i class="fa-solid fa-headphones"></i>
+                            </div>
+                            <div class="content-name">
+                                Music <br>
+                                Writing
+                            </div>
+                            <div class="content-explain">
+                                Sheet music is the basic form in which Western classical music is notated so that it can
+                                be learned and
+                                performed by solo singers.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="content-element">
+                            <div class="content-services__icon">
+                                <i class="fa-solid fa-gamepad"></i>
+                            </div>
+                            <div class="content-name">
+                                Game <br>
+                                Development
+                            </div>
+                            <div class="content-explain">
+                                Come Up With a Game Idea. An idea is the first thing that comes to mind when a game is
+                                being described
+                                before creating.
+                            </div>
+                        </div>
+
+                        <div class="content-element">
+                            <div class="content-services__icon">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+                            <div class="content-name">
+                                Photography <br>
+                                & Video
+                            </div>
+                            <div class="content-explain">
+                                Sessions. If you are a photographer that spends most of the time in a portrait studio,
+                                you can charge for
+                                your session.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- DesignSkills -->
+        <div class="wrapper__container">
+            <div class="content-DesignSkills">
+                <div class="content-title">
+                    <h1>Design Skills</h1>
+                    <div>CREATIVE ABILITY</div>
+                </div>
+
+                <div class="content-text">
+                    <div>
+                        <div class="content-element">
+                            <div class="content-name">
+                                Web Layout
+                            </div>
+                            <div class="content-explain">
+                                Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit
+                                amet nibh.
+                            </div>
+                            <div class="progress-90">
+                                <div class="percentage">
+                                    <span>90%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-element">
+                            <div class="content-name">
+                                Illustrations
+                            </div>
+                            <div class="content-explain">
+                                Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit
+                                amet nibh.
+                            </div>
+                            <div class="progress-70">
+                                <div class="percentage">
+                                    <span>70%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="content-element">
+                            <div class="content-name">
+                                Photoshop
+                            </div>
+                            <div class="content-explain">
+                                Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit
+                                amet nibh.
+                            </div>
+                            <div class="progress-55">
+                                <div class="percentage">
+                                    <span>55%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-element">
+                            <div class="content-name">
+                                Graphic Design
+                            </div>
+                            <div class="content-explain">
+                                Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit
+                                amet nibh.
+                            </div>
+                            <div class="progress-86">
+                                <div class="percentage">
+                                    <span>86%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Language Skills -->
+        <div class="wrapper__container">
+            <div class="content-LanguageSkills">
+                <div class="content-title">
+                    <h1>Language Skills</h1>
+                    <div>READING AND WRITING</div>
+                </div>
+
+                <div class="content-text">
+                    <div>
+                        <div class="content-element">
+                            <div class="content-name">
+                                English
+                            </div>
+                            <div class="content-explain">
+                                Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit
+                                amet nibh.
+                            </div>
+                            <div class="progress">
+                                <div class="percentage" id="percentage-element-1">
+                                    <span class="list-1">
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                    </span>
+                                </div>
+                                <div class="list-2">
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-element">
+                            <div class="content-name">
+                                German
+                            </div>
+                            <div class="content-explain">
+                                Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit
+                                amet nibh.
+                            </div>
+                            <div class="progress">
+                                <div class="percentage" id="percentage-element-2">
+                                    <span class="list-1">
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                    </span>
+                                </div>
+                                <div class="list-2">
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="content-element">
+                            <div class="content-name">
+                                Italian
+                            </div>
+                            <div class="content-explain">
+                                Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit
+                                amet nibh.
+                            </div>
+                            <div class="progress">
+                                <div class="percentage" id="percentage-element-3">
+                                    <span class="list-1">
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                    </span>
+                                </div>
+                                <div class="list-2">
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-element">
+                            <div class="content-name">
+                                French
+                            </div>
+                            <div class="content-explain">
+                                Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit
+                                amet nibh.
+                            </div>
+                            <div class="progress">
+                                <div class="percentage" id="percentage-element-4">
+                                    <span class="list-1">
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                        <span class="item-1"></span>
+                                    </span>
+                                </div>
+                                <div class="list-2">
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                    <span class="item-2"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Coding Skills -->
+        <div class="wrapper__container">
+            <div class="content-CodingSkills">
+                <div class="content-title">
+                    <h1>Coding Skills</h1>
+                    <div>DEVELOPING ON</div>
+                </div>
+
+                <div class="content-text">
+
+                    <div class="content-element">
+                        <div class="content-name">
+                            PHP, MYSQL
+                        </div>
+                        <div class="progress">
+                            <div class="percentage"></div>
+                        </div>
+                    </div>
+
+                    <div class="content-element">
+                        <div class="content-name">
+                            JavaScript
+                        </div>
+                        <div class="progress">
+                            <div class="percentage"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="content-element">
+                        <div class="content-name">
+                            HTML, CSS
+                        </div>
+                        <div class="progress">
+                            <div class="percentage"></div>
+                        </div>
+                    </div>
+
+                    <div class="content-element">
+                        <div class="content-name">
+                            Python
+                        </div>
+                        <div class="progress">
+                            <div class="percentage"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Portfolio -->
+        <!-- <div class="wrapper__container">
+            <div class="content-Portfolio">
+                <div class="content-title">
+                    <h1>Portfolio</h1>
+                    <div>LATEST WORKS</div>
+                </div>
+
+                <div class="Portfolio-menu">
+                    <div class="btn-menu">ALL</div>
+                    <div class="btn-menu">Video</div>
+                    <div class="btn-menu"></div>
+                    <div class="btn-menu"></div>
+                    <div class="btn-menu"></div>
+                    <div class="btn-menu"></div>
+                    <div class="btn-menu"></div>
+
+                </div>
+
+                <div class="box-element">
+                    <div class="Portfolio-element">
+
+                    </div>
+                    <div class="Portfolio-element">
+                        
+                    </div>
+
+                </div>
+
+            </div>
+        </div> -->
+
+
+
+
+        <!-- Contact -->
+        <div id="CONTACT" class="wrapper__container">
+            <div class="content-Contact">
+                <div class="content-title">
+                    <h1>Contact</h1>
+                    <div>LET'S TALK</div>
+                </div>
+
+                <div>
+                    <form action="" method="post" novalidate="novalidate">
+                        <div class="form-element">
+                            <div>FULL NAME <strong>*</strong></div>
+                            <input type="text" placeholder="ej: Genoveva Lian Hull">
+                        </div>
+                        <div class="form-element">
+                            <div>EMAIL ADDRESS <strong>*</strong></div>
+                            <input type="text" placeholder="example@domain.coi">
+                        </div>
+                        <div class="form-element">
+                            <div>MESSAGE <strong>*</strong></div>
+                            <textarea placeholder="To Write"></textarea>
+                        </div>
+                        <div class="form-element">
+                            <button type="submit">
+                                <span>SEND MESSAGE</span>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div>
+                        <div class="contact-information-name">
+                            <h1>Joe Wilson</h1>
+                            <div>CONSULTANT & MENTOR</div>
+                        </div>
+
+                        <div class="content-information">
+                            <ul>
+                                <li><strong>AGE :</strong>24</li>
+                                <li><strong>RESIDENCE :</strong>USA</li>
+                                <li><strong>FREELANCE :</strong>Available</li>
+                                <li><strong>ADDRESS :</strong>San Francisco</li>
+                                <li><strong>PHONE :</strong>+1256 254 84 56</li>
+                                <li><strong>E-MAIL :</strong>alejandroa@gmail.com</li>
+                            </ul>
+                        </div>
+
+                        <div class="contact-Signature">
+                            Joe Wilson
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <!-- footer -->
+    <footer class="footer">
+
+        <div class="footer__content">
+            <a href="https://www.facebook.com/" target="_blank" class="footer__icon">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="footer__icon">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://dribbble.com/" target="_blank" class="footer__icon">
+                <i class="fa-solid fa-basketball"></i>
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

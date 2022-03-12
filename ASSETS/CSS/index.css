@@ -1,0 +1,203 @@
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    box-sizing: border-box;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+
+
+
+/* header */
+header{
+    display: flex;
+    justify-content: center;
+}
+
+.header{
+    width: 1116px;
+    position: relative;
+    box-shadow: 1px 1px 6px #3f3f3f;
+}
+
+.header >img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.header .background-overlay{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color:  rgba(0,0,0,0.6);
+}
+
+.header nav{
+    position: absolute;
+    top: 0px;
+    padding: 1% 3%;
+    width: 94%;
+    height: 66px;
+    display: flex;
+    justify-content: space-between;
+    background-color:  rgba(0,0,0,0.4);
+    box-shadow: 2px 2px 20px #202020;
+}
+
+.header .logo_Nickname{
+    display: flex;
+    text-shadow: 2px 2px 8px black;
+}
+
+.header .logo_Nickname .logo{
+    width: 50px;
+    height: 50px;
+    margin: auto 0;
+    background-image: linear-gradient(0, red, rgb(247, 100, 16));
+    opacity: 96%;
+}
+
+.header .logo_Nickname .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 100%;
+}
+
+.header .logo_Nickname .Nickname{
+    margin-left: 16px;
+    color: rgba(231, 17, 17, 0.945);
+    font-weight: 400;
+}
+
+.header .menu{
+    display: flex;
+}
+
+.header .menu .menu-item{
+    margin: auto 0 auto 40px;
+}
+
+.header .menu .menu-item >a:hover
+{
+    color: #68e0cf;
+}
+
+.header .menu .menu-item a{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.header .menu .menu-item ul{
+    display: none;
+    position: absolute;
+    z-index: 3;
+    border: 1px solid #3f3f3f;
+    background-color: #3f3f3f;
+    width: 146px;
+    box-shadow: 1px 3px 10px #292929;
+    top: 66px;
+    opacity: 86%;
+}
+
+.header .menu .menu-item:hover ul{
+    display: block;
+}
+
+.header .menu .menu-item ul li{
+    font-size: 13px;
+    padding: 10px;
+    border-bottom: 1px solid #757575;
+}
+
+.header .menu .menu-item ul li:last-child{
+    border-bottom: 0;
+}
+
+.header .menu .menu-item ul li a{
+    display: block;
+}
+
+.header .menu .menu-item ul a:hover{
+    color: #68e0cf;
+}
+
+.header .menu .menu-item:first-child ul::before{
+    content: "";
+    position: absolute;
+    border: 10px solid ;
+    border-color: transparent transparent #3f3f3f transparent;
+    left: 0;
+    top: -20px;
+}
+
+.header .menu .menu-item:first-child ul::after{
+    content: "";
+    position: absolute;
+    width: 66px;
+    height: 16px;
+    background-color: transparent;
+    left: 0;
+    top: -16px;
+}
+
+.header .group-photo{
+    position: absolute;
+    z-index: 2;
+    top: 100px;
+    width: 100%;
+    height: 130px;
+}
+
+.header .group-photo div{
+    width: 130px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.header .group-photo div img{
+    width: 97%;
+    height: 97%;
+    object-fit:contain;
+    border: 2px solid #1f796d;
+    box-shadow: 6px 10px 18px #68e0cf;
+    border-radius: 100%;
+    opacity: 86%;
+}
+
+.header .groupName{
+    position: absolute;
+    top: 350px;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.header .icon{
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.header .icon a{
+    margin: 0 6px;
+}
+
+.header .icon a:hover i{
+    color: #fff;
+}
+
+.header .icon i{
+    color: rgb(221, 221, 221);
+    font-size: 20px;
+}

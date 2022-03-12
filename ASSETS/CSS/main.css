@@ -283,7 +283,7 @@ body{
 /* wrapper__container-1   ----   wrapper__star */
 .wrapper__container-1{
     border-bottom: 1px solid #585D65;
-    padding: 0 8% 16% 0;;
+    padding: 0 8% 16% 0;
 }
 
 .content-started{
@@ -447,7 +447,7 @@ body{
 }
 
 .content-element{
-    width: 100%;
+    width: 92%;
     margin: 7% 4% 0 4%;
 }
 
@@ -646,6 +646,45 @@ body{
     40%{background-image: linear-gradient(0, var(--white-color), var(--green-color));}
     100%{background-color: var(--green-color);}
 }
+
+
+
+
+/* Coding Skills */
+
+.content-CodingSkills .content-element{
+    flex-direction: column;
+}
+
+
+.content-CodingSkills .progress{
+    background-color: #585d65;
+    height: 16px;
+    width: 100%;
+}
+
+.content-CodingSkills .percentage{
+    background-color: antiquewhite;
+    height: 100%;
+}
+
+.content-CodingSkills .content-element:nth-child(1) .percentage{
+    width: 60%;
+}
+
+.content-CodingSkills .content-element:nth-child(2) .percentage{
+    width: 70%;
+}
+
+.content-CodingSkills .content-element:nth-child(3) .percentage{
+    width: 86%;
+}
+
+.content-CodingSkills .content-element:nth-child(4) .percentage{
+    width: 90%;
+}
+
+
 
 
 
