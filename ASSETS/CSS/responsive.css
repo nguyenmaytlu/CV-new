@@ -138,24 +138,22 @@
         margin: -160px auto 0 auto; 
         max-width: 500px;
         padding-left: 0;
-        position: relative;
+        display: flex;
+        justify-content: center;
     }
 
     .content-started .content-started__list-1 span{
-        display: block;
-        text-align: center;
+        top: 0;
     }
 
     .content-started .content-started__list-1 .content-started__button{
         margin-top: 15%;
-        text-align: center;
+        justify-content: center;
     }
 
     .content-started .content-started__list-1 .content-started__button a {
         margin-right: 0;
     }
-
-
 
 
 
@@ -349,17 +347,17 @@
         margin: -160px auto 0 auto; 
         max-width: 500px;
         padding-left: 0;
-        position: relative;
+        display: flex;
+        justify-content: center;
     }
 
     .content-started .content-started__list-1 span{
-        display: block;
-        text-align: center;
+        top: 0;
     }
 
     .content-started .content-started__list-1 .content-started__button{
         margin-top: 15%;
-        text-align: center;
+        justify-content: center;
     }
 
     .content-started .content-started__list-1 .content-started__button a {
@@ -383,27 +381,17 @@
         margin: 0;
     }
 
-    .content-About .content-About__text .content-About__text-1{
-        flex-direction: column;
+    .content-About .content-About__information .information-detail{
+        font-size: 12px;
     }
 
-    .content-About .content-About__text .content-About__text-1 div{
-        width: 100%;
-        text-align: center;
-        margin: 40px 0 0 0;
+    .content-About .content-About__information .information-detail strong{
+        width: 47%;
     }
 
-    .content-About .content-About__text .content-About__text-2{
-        margin: 0;
-        text-align: center;
+    .content-About .content-About__information .information-detail::before{
+        left: -11%;
     }
-
-    .content-information li{
-        width: 90%;
-        margin: 0;
-        line-height: 36px;
-    }
-
 
 
     /*Services*/
