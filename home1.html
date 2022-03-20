@@ -19,10 +19,6 @@
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-
     <!--  CSS ND-->
     <link rel="stylesheet" href="./ASSETS/CSS/main.css">
 
@@ -35,60 +31,55 @@
 <body>
 
     <!-- background-animations-->
-    <div class="background-animations">
+    <div class="background_animations">
         <div>
-            <div class="col-1"></div>
-            <div class="col-2"></div>
-            <div class="col-3"></div>
+            <div class="col_1"></div>
+            <div class="col_2"></div>
+            <div class="col_3"></div>
         </div>
     </div>
 
-    <!-- click navbar-menu-mobile -->
-    <script>
-        $(document).ready(function () {
-            $('.navbar-menu-mobile').click(function () {
-                $('.navbar-list').slideToggle();
-                // $('#navbar').slideToggle();
-            })
-        })
-    </script>
 
     <!-- header -->
     <header class="header">
         <nav class="navbar" id="navbar">
-            <div class="navbar-logo">
+            <div class="navbar_logo">
                 <a href="#">
                     <img src="./ASSETS/IMAGE/logo.png" alt="logo">
                     <span>Joé <br> Wilson</span>
                 </a>
             </div>
-            <ul class="navbar-list" id="navbar__menu-list">
-                <li class="navbar-item">
-                    <a href="index.html" class="navbar__item-link">HOME<i class="fa-solid fa-angle-down"></i></a>
+            <ul class="navbar_list" id="navbar_menu_list">
+                <li class="navbar_item">
+                    <a href="index.html" class="navbar_item_link">HOME<i class="fa-solid fa-angle-down"></i></a>
                     <ul>
                         <li><a href="home1.html">HOME 1</a></li>
                         <li><a href="">HOME 2</a></li>
                         <li><a href="">HOME 3</a></li>
                     </ul>
                 </li>
-                <li class="navbar-item">
-                    <a href="#ABOUT" class="navbar__item-link">ABOUT</a>
+
+                <li class="navbar_item">
+                    <a href="#ABOUT" class="navbar_item_link">ABOUT</a>
                 </li>
-                <li class="navbar-item">
-                    <a href="#" class="navbar__item-link">RESUME</a>
+                <li class="navbar_item">
+                    <a href="#" class="navbar_item_link">RESUME</a>
                 </li>
-                <li class="navbar-item">
-                    <a href="#" class="navbar__item-link">PORTFOLIO</a>
+                <li class="navbar_item">
+                    <a href="#" class="navbar_item_link">PORTFOLIO</a>
                 </li>
-                <li class="navbar-item">
-                    <a href="#CONTACT" class="navbar__item-link">CONTACT</a>
+                <li class="navbar_item">
+                    <a href="#CONTACT" class="navbar_item_link">CONTACT</a>
                 </li>
-                <li class="navbar-item">
-                    <a href="#" class="navbar__item-link">DOWNLOAD CV<i class="fa-solid fa-download"></i></a>
+                <li class="navbar_item">
+                    <a href="#" class="navbar_item_link">DOWNLOAD CV<i class="fa-solid fa-download"></i></a>
                 </li>
             </ul>
-            <div class="navbar-menu-mobile">
-                <a href="#"><i class="fa-solid fa-bars"></i></a>
+            <div class="navbar_menu_mobile">
+                <!-- <a href="#" class="mobile_link_xmark"><i class="fa-solid fa-xmark"></i></a> -->
+
+                <a href="#" class="mobile_link_bars"><i class="fa-solid fa-bars"></i></a>
+                <a href="#" class="mobile_link_xmark"><i class="fa-solid fa-xmark"></i></a>
             </div>
 
         </nav>
@@ -99,26 +90,26 @@
     <div class="wrapper">
 
         <!-- background -->
-        <div class="wrapper__background">
+        <div class="wrapper_background">
             <img src="./ASSETS/IMAGE/man.jpg" alt="">
         </div>
 
         
         <!-- wrapper__started -->
-        <div class="wrapper__container-1">
-            <div class="content-started">
+        <div class="wrapper_container_1">
+            <div class="content_started">
 
                 <h1>Joé <br> Wilson</h1>
 
-                <div class="content-started__list-1">
+                <div class="content_started_list_1">
                     <span style>WebDesigner</span>
                     <span style>Programmer</span>
-                    <div class="content-started__text">
+                    <div class="content_started_text">
                         Hello! I am Web Developer from United States, New York. I have rich experience in web site
                         design and building, also I am good at wordpress. I love to talk with you about our unique.
                     </div>
 
-                    <div class="content-started__button">
+                    <div class="content_started_button">
                         <a href="#ABOUT">
                             ABOUT ME
                             <i class="fa-solid fa-angle-right"></i>
@@ -129,6 +120,7 @@
                 </div>
             </div>
         </div>
+
 
         <!-- About me -->
         <div id="ABOUT" class="wrapper__container">
@@ -612,27 +604,30 @@
 
         <!-- Contact -->
         <div id="CONTACT" class="wrapper__container">
-            <div class="content-Contact">
+            <div class="content_Contact">
                 <div class="content-title">
                     <h1>Contact</h1>
                     <div>LET'S TALK</div>
                 </div>
 
                 <div>
-                    <form action="" method="post" novalidate="novalidate">
-                        <div class="form-element">
+                    <form action="">
+                        <div class="form_element">
                             <div>FULL NAME <strong>*</strong></div>
-                            <input type="text" placeholder="ej: Genoveva Lian Hull">
+                            <input type="text" placeholder="ej: Genoveva Lian Hull" class="input_Contact error">
+                            <span class="empty_error"></span>
                         </div>
-                        <div class="form-element">
+                        <div class="form_element">
                             <div>EMAIL ADDRESS <strong>*</strong></div>
-                            <input type="text" placeholder="example@domain.coi">
+                            <input type="text" placeholder="example@domain.coi" class="input_email_Contact error">
+                            <span class="invalid_email_error"></span>
                         </div>
-                        <div class="form-element">
+                        <div class="form_element">
                             <div>MESSAGE <strong>*</strong></div>
-                            <textarea placeholder="To Write"></textarea>
+                            <textarea placeholder="To Write" class="input_Contact error"></textarea>
+                            <span class="empty_error"></span>
                         </div>
-                        <div class="form-element">
+                        <div class="form_element">
                             <button type="submit">
                                 <span>SEND MESSAGE</span>
                                 <i class="fa-solid fa-angle-right"></i>
@@ -641,12 +636,12 @@
                     </form>
 
                     <div>
-                        <div class="contact-information-name">
+                        <div class="contact_information_name">
                             <h1>Joe Wilson</h1>
                             <div>CONSULTANT & MENTOR</div>
                         </div>
 
-                        <div class="content-information">
+                        <div class="content_information">
                             <ul>
                                 <li><strong>Full name :</strong>Nguyen Van A</li>
                                 <li><strong>Date of birth :</strong>25/07/2002</li>
@@ -657,7 +652,7 @@
                             </ul>
                         </div>
 
-                        <div class="contact-Signature">
+                        <div class="contact_Signature">
                             Joe Wilson
                         </div>
                     </div>
@@ -673,14 +668,14 @@
     <!-- footer -->
     <footer class="footer">
 
-        <div class="footer__content">
-            <a href="https://www.facebook.com/" target="_blank" class="footer__icon">
+        <div class="footer_content">
+            <a href="https://www.facebook.com/" target="_blank" class="footer_icon">
                 <i class="fa-brands fa-facebook-f"></i>
             </a>
-            <a href="https://www.instagram.com/" target="_blank" class="footer__icon">
+            <a href="https://www.instagram.com/" target="_blank" class="footer_icon">
                 <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="https://dribbble.com/" target="_blank" class="footer__icon">
+            <a href="https://dribbble.com/" target="_blank" class="footer_icon">
                 <i class="fa-solid fa-basketball"></i>
             </a>
         </div>
