@@ -38,75 +38,65 @@ for(let i=1; i<navbar_item_link.length; i++){
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ slider
 
+// experience
+
 var experience_back = document.querySelector(".experience_back")
 var experience_next = document.querySelector(".experience_next")
 
-var content_slider = document.querySelector(".content_slider")
-var sliders = document.querySelectorAll(".slider")
+var experience_content_slider = document.querySelector(".content_experience .content_slider")
+var experience_sliders = document.querySelectorAll(".content_experience .slider")
 
-var postionX_dt = 0
-var postionX_mt = 0
-var index = 0
+var experience_spaceX_dt = 0
+var experience_spaceX_mt = 0
+var experience_index = 0
 
 
-// hàm di chuyển 1 phần tử theo trục X 1 khoảng postionX
+// hàm xác định độ lớn chuyển của Element 'content_slider' theo trục X 1 khoảng spaceX
 function handleChangeSlide(a){
     if(a===1){
-        if(index >= sliders.length -1){
-            return
-        }
-        postionX_dt =  postionX_dt - 100 
-        postionX_mt =  postionX_mt - 54  
+        if(experience_index >= experience_sliders.length -1) return
 
-        if(window.matchMedia("(max-width: 740px)").matches){
-            content_slider.style.transform = `translateX(${postionX_dt}%)`   
-        }
-        else{
-            content_slider.style.transform = `translateX(${postionX_mt}%)`   
-        }
-        index++
+        experience_spaceX_dt =  experience_spaceX_dt - 100
+        experience_spaceX_mt =  experience_spaceX_mt - 54
+        experience_index++
     }
-    else if(a===-1){
-        if(index <= 0){
-            return
-        }
-        postionX_dt =  postionX_dt + 100
-        postionX_mt =  postionX_mt + 54
+    if(a===-1){
+        if(experience_index <= 0) return
 
-        if(window.matchMedia("(max-width: 740px)").matches){           
-            content_slider.style.transform = `translateX(${postionX_dt}%)`   
-        }
-        else{
-            content_slider.style.transform = `translateX(${postionX_mt}%)`   
-        }
-        index--
+        experience_spaceX_dt =  experience_spaceX_dt + 100
+        experience_spaceX_mt =  experience_spaceX_mt + 54
+        experience_index--
     }
-    // console.log("dt", postionX_dt)
-    // console.log("mt", postionX_mt)
 }
 
 // bắt sự kiện khi click vào nut chuyển tiếp
 experience_next.addEventListener("click", function () {
     handleChangeSlide(1)
-    console.log("dt", postionX_dt)
-    console.log("mt", postionX_mt)
 })
 
 // bắt sự kiện khi click vào nut quay lại
 experience_back.addEventListener("click", function () {
     handleChangeSlide(-1)
-    console.log("dt", postionX_dt)
-    console.log("mt", postionX_mt)
 })
 
+// hàm dịch chuyển phần tử content_slider 1 khoảng spaceX
 setInterval(function(){
     if(window.matchMedia("(max-width: 740px)").matches){
-        content_slider.style.transform = `translateX(${postionX_dt}%)` 
+        experience_content_slider.style.transform = `translateX(${experience_spaceX_dt}%)`
     }
     else{
-        content_slider.style.transform = `translateX(${postionX_mt}%)` 
+        experience_content_slider.style.transform = `translateX(${experience_spaceX_mt}%)` 
     }
 },1)
+
+
+// Education
+// var education_back = document.querySelector(".education_back")
+// var education_next = document.querySelector(".education_next")
+
+// var education_content_slider = document.querySelector(".content_education .content_slider")
+// var education_sliders = document.querySelectorAll(".content_education .slider")
+
 
 
 
