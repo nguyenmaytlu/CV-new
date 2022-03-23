@@ -44,7 +44,8 @@ var experience_next = document.querySelector(".experience_next")
 var content_slider = document.querySelector(".content_slider")
 var sliders = document.querySelectorAll(".slider")
 
-var postionX = 0
+var postionX_dt = 0
+var postionX_mt = 0
 var index = 0
 
 
@@ -54,31 +55,58 @@ function handleChangeSlide(a){
         if(index >= sliders.length -1){
             return
         }
+        postionX_dt =  postionX_dt - 100 
+        postionX_mt =  postionX_mt - 54  
 
-        postionX =  postionX - 54           //54% = width + padding-right = 46% +8%
-        content_slider.style.transform = `translateX(${postionX}%)`             //di chuyển phần tử sang bên trái 1 khoảng postionX
+        if(window.matchMedia("(max-width: 740px)").matches){
+            content_slider.style.transform = `translateX(${postionX_dt}%)`   
+        }
+        else{
+            content_slider.style.transform = `translateX(${postionX_mt}%)`   
+        }
         index++
     }
     else if(a===-1){
         if(index <= 0){
             return
         }
-        postionX = postionX + 54
-        content_slider.style.transform = `translateX(${postionX}%)`
+        postionX_dt =  postionX_dt + 100
+        postionX_mt =  postionX_mt + 54
+
+        if(window.matchMedia("(max-width: 740px)").matches){           
+            content_slider.style.transform = `translateX(${postionX_dt}%)`   
+        }
+        else{
+            content_slider.style.transform = `translateX(${postionX_mt}%)`   
+        }
         index--
     }
+    // console.log("dt", postionX_dt)
+    // console.log("mt", postionX_mt)
 }
 
 // bắt sự kiện khi click vào nut chuyển tiếp
 experience_next.addEventListener("click", function () {
     handleChangeSlide(1)
+    console.log("dt", postionX_dt)
+    console.log("mt", postionX_mt)
 })
 
 // bắt sự kiện khi click vào nut quay lại
 experience_back.addEventListener("click", function () {
     handleChangeSlide(-1)
+    console.log("dt", postionX_dt)
+    console.log("mt", postionX_mt)
 })
 
+setInterval(function(){
+    if(window.matchMedia("(max-width: 740px)").matches){
+        content_slider.style.transform = `translateX(${postionX_dt}%)` 
+    }
+    else{
+        content_slider.style.transform = `translateX(${postionX_mt}%)` 
+    }
+},1)
 
 
 
