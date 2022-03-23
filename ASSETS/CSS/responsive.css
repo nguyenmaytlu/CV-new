@@ -2,7 +2,7 @@
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Tablet */
 
-@media(min-width: 740px) and (max-width: 1024px)
+@media(min-width: 740px) and (max-width: 1066px)
 {
 
 /* header */
@@ -383,46 +383,84 @@
 
 
 
+    
     /* About me */
 
-    .wrapper__container{
+    .wrapper_container{
         padding: 8%;
     }
 
-    .content-title{
+    .content_title{
         margin: 0;
     }
 
-    .content-title h1{
+    .content_title h1{
         font-size: 34px;
         margin: 0;
     }
 
-    .content-About .content-About__information .information-detail{
+    .content_About .content_about_information .information_detail{
         font-size: 12px;
     }
 
-    .content-About .content-About__information .information-detail strong{
+    .content_About .content_about_information .information_detail strong{
         width: 47%;
     }
 
-    .content-About .content-About__information .information-detail::before{
+    .content_About .content_about_information .information_detail::before{
         left: -11%;
     }
 
 
     /*Services*/
 
-    .content-text>div{
+    .content_text>div{
         flex-direction: column;
     }
 
-    .content-element{
+    .content_element{
         width: 100%;
         margin: 16% 0 0 0;
     }
 
+
+    /* Experience */
+
+    .slider{
+        padding-right: 0;
+        flex: 1 0 100%;
+    }
+
+    .date{
+        position:unset;
+        top: 0;
+        left: 0;
+        margin-bottom: 1%;
+        transform: rotate(0);
+    }
     
+    .content_experience .content_name,
+    .content_education .content_name{
+        margin-left: 0;
+    }
+
+
+    .navs{
+        position:sticky;
+        display: inline-block;
+        right: 0;
+        top: 0;
+        margin-top: 6%;
+    }
+
+
+    
+
+
+
+
+
+
     
     /* Contact */
     .content_Contact>div:last-child{
