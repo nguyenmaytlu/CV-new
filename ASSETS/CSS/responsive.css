@@ -453,13 +453,34 @@
         margin-top: 6%;
     }
 
-
+    
     
 
+    /* Portfolio */
+
+    .content_Portfolio .portfolio_menu{
+        justify-content: center;
+        margin: 8% 0 -6% 0;
+    }
+
+    .content_Portfolio .box_element{
+        margin: 0;
+    }
+
+    .content_Portfolio .box_element .portfolio_list {
+        flex-direction: column;
+    }
+
+    .content_Portfolio .box_element .portfolio_item{
+        margin: 15% 0 0 0;
+    }
 
 
 
 
+
+
+    
 
     
     /* Contact */

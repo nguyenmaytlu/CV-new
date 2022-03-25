@@ -34,8 +34,6 @@ for(let i=1; i<navbar_item_link.length; i++){
 
 
 
-
-
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ slider
 
 // experience
@@ -52,16 +50,16 @@ var experience_index = 0
 
 
 // hàm xác định độ lớn chuyển của Element 'content_slider' theo trục X 1 khoảng spaceX
-function handleChangeSlide(a){
+function changeTravelDistanceExperience(a){
     if(a===1){
-        if(experience_index >= experience_sliders.length -1) return
+        if(experience_index == experience_sliders.length -1) return
 
         experience_spaceX_dt =  experience_spaceX_dt - 100
         experience_spaceX_mt =  experience_spaceX_mt - 54
         experience_index++
     }
     if(a===-1){
-        if(experience_index <= 0) return
+        if(experience_index == 0) return
 
         experience_spaceX_dt =  experience_spaceX_dt + 100
         experience_spaceX_mt =  experience_spaceX_mt + 54
@@ -71,12 +69,12 @@ function handleChangeSlide(a){
 
 // bắt sự kiện khi click vào nut chuyển tiếp
 experience_next.addEventListener("click", function () {
-    handleChangeSlide(1)
+    changeTravelDistanceExperience(1)
 })
 
 // bắt sự kiện khi click vào nut quay lại
 experience_back.addEventListener("click", function () {
-    handleChangeSlide(-1)
+    changeTravelDistanceExperience(-1)
 })
 
 // hàm dịch chuyển phần tử content_slider 1 khoảng spaceX
@@ -90,16 +88,78 @@ setInterval(function(){
 },1)
 
 
+
 // Education
-// var education_back = document.querySelector(".education_back")
-// var education_next = document.querySelector(".education_next")
+var education_back = document.querySelector(".education_back")
+var education_next = document.querySelector(".education_next")
 
-// var education_content_slider = document.querySelector(".content_education .content_slider")
-// var education_sliders = document.querySelectorAll(".content_education .slider")
+var education_content_slider = document.querySelector(".content_education .content_slider")
+var education_sliders = document.querySelectorAll(".content_education .slider")
+
+var education_space_dt = 0
+var education_space_mt = 0
+var education_index = 0
+
+function changeTravelDistanceEducation(a){
+    if(a===1){
+        if(education_index == education_sliders.length-1) return
+
+        education_space_dt = education_space_dt -100
+        education_space_mt = education_space_mt -54
+        education_index ++
+    }
+    if(a===-1){
+        if(education_index == 0) return
+
+        education_space_dt = education_space_dt + 100
+        education_space_mt = education_space_mt +54
+        education_index --
+    }
+}
+
+education_next.addEventListener("click",function(){
+    changeTravelDistanceEducation(1)
+})
+
+education_back.addEventListener("click",function(){
+    changeTravelDistanceEducation(-1)
+})
+
+setInterval(function(){
+    if(window.matchMedia("(max-width: 740px)").matches){
+        education_content_slider.style.transform = `translateX(${education_space_dt}%)`
+    }
+    else{
+        education_content_slider.style.transform = `translateX(${education_space_mt}%)`
+    }
+},1)
 
 
 
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Portfolio
+var overlay = document.querySelectorAll(".overlay")
+var portfolio_icon = document.querySelectorAll(".portfolio_icon")
+
+var temp
+
+for(let i =0; i<portfolio_icon.length; i++){
+    portfolio_icon[i].addEventListener("click",function(){
+        overlay[i].style.transform = "scale(1)"
+        temp = overlay[i].querySelector("iframe").src
+    })
+}
+
+
+for(let i=0; i<overlay.length; i++){
+    overlay[i].addEventListener("click",function(){
+        overlay[i].querySelector("iframe").src = "0"
+        overlay[i].style.transform = "scale(0)"
+        setTimeout(function(){
+            overlay[i].querySelector("iframe").src = temp
+        },1)
+    })
+}
 
 
 
