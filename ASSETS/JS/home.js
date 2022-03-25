@@ -100,6 +100,7 @@ var education_space_dt = 0
 var education_space_mt = 0
 var education_index = 0
 
+// tính khoảng dịch chuyển của content_slider
 function changeTravelDistanceEducation(a){
     if(a===1){
         if(education_index == education_sliders.length-1) return
@@ -117,14 +118,17 @@ function changeTravelDistanceEducation(a){
     }
 }
 
+// bắt sự kiện khi click vào next thì chuyển tiếp slider
 education_next.addEventListener("click",function(){
     changeTravelDistanceEducation(1)
 })
 
+// bắt sự kiện khi click vào back thì quay lại slider
 education_back.addEventListener("click",function(){
     changeTravelDistanceEducation(-1)
 })
 
+// cập nhật vị trí dịch chuyển của content_slider theo độ lớn của cửa sổ trình duyệt
 setInterval(function(){
     if(window.matchMedia("(max-width: 740px)").matches){
         education_content_slider.style.transform = `translateX(${education_space_dt}%)`
@@ -137,24 +141,82 @@ setInterval(function(){
 
 
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Portfolio
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Portfolio
+
+var all = document.querySelector(".all")
+var videos = document.querySelector(".videos")
+var musics = document.querySelector(".musics")
+var links = document.querySelector(".links")
+var images = document.querySelector(".images")
+var portfolio_item = document.querySelectorAll(".portfolio_item")
+
 var overlay = document.querySelectorAll(".overlay")
 var portfolio_icon = document.querySelectorAll(".portfolio_icon")
 
+
+// Giải quyết việc lọc sản phẩm
+function testClassName(className){
+    for(let i =0; i<portfolio_item.length; i++){
+        if(portfolio_item[i].classList.contains(className)){
+            portfolio_item[i].style.display = "inline-block"
+            console.log("a")
+        }
+        else{
+            portfolio_item[i].style.display = "none"
+        }
+    } 
+}
+
+// bắt sự kiện khi click vào all hiện ra tất cả sản phẩm
+all.addEventListener("click",function(){
+    testClassName("portfolio_item")
+})
+
+// bắt sự kiện khi click vào video hiện tất cả các sản phẩm video
+videos.addEventListener("click",function(){
+    testClassName("video")
+})
+
+// bắt sự kiện khi click vào music hiện tất cả sản phẩm music
+musics.addEventListener("click",function(){
+    testClassName("music")
+})
+
+// bắt sự kiện khi click vào link hiện tất cả sản phẩm link
+links.addEventListener("click",function(){
+    testClassName("link")
+})
+
+// bắt sự kiện khi click vào image hiện tất cả sản phẩm image
+images.addEventListener("click",function(){
+    testClassName("image")
+})
+
+
+
+
+// giải quyết việc xem thông tin chi tiết của mục portfolio
 var temp
 
-for(let i =0; i<portfolio_icon.length; i++){
+// bắt sự kiện khi click vào portfolio_icon hiện full thông tin
+for(let i =0; i<portfolio_icon.length-1; i++){
     portfolio_icon[i].addEventListener("click",function(){
         overlay[i].style.transform = "scale(1)"
+        if(overlay[i].querySelector("iframe")==null){
+            return
+        }
         temp = overlay[i].querySelector("iframe").src
     })
 }
 
-
+// bắt sự kiện khi click vào overlay làm ẩn chính nó
 for(let i=0; i<overlay.length; i++){
-    overlay[i].addEventListener("click",function(){
-        overlay[i].querySelector("iframe").src = "0"
+    overlay[i].addEventListener("click",function(e){
         overlay[i].style.transform = "scale(0)"
+        if(overlay[i].querySelector("iframe")==null){
+            return
+        }
+        overlay[i].querySelector("iframe").src = "0"
         setTimeout(function(){
             overlay[i].querySelector("iframe").src = temp
         },1)
@@ -163,7 +225,8 @@ for(let i=0; i<overlay.length; i++){
 
 
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~CONTACT
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CONTACT
 
 var input_Contact = document.querySelectorAll(".content_Contact .input_Contact")
 var input_email_Contact = document.querySelector(".input_email_Contact ")

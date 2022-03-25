@@ -60,24 +60,22 @@
                 </li>
 
                 <li class="navbar_item">
-                    <a href="#ABOUT" class="navbar_item_link">ABOUT</a>
+                    <a href="#about" class="navbar_item_link">ABOUT</a>
                 </li>
                 <li class="navbar_item">
-                    <a href="#" class="navbar_item_link">RESUME</a>
+                    <a href="#resume" class="navbar_item_link">RESUME</a>
                 </li>
                 <li class="navbar_item">
-                    <a href="#" class="navbar_item_link">PORTFOLIO</a>
+                    <a href="#portfolio" class="navbar_item_link">PORTFOLIO</a>
                 </li>
                 <li class="navbar_item">
-                    <a href="#CONTACT" class="navbar_item_link">CONTACT</a>
+                    <a href="#contact" class="navbar_item_link">CONTACT</a>
                 </li>
                 <li class="navbar_item">
                     <a href="#" class="navbar_item_link">DOWNLOAD CV<i class="fa-solid fa-download"></i></a>
                 </li>
             </ul>
             <div class="navbar_menu_mobile">
-                <!-- <a href="#" class="mobile_link_xmark"><i class="fa-solid fa-xmark"></i></a> -->
-
                 <a href="#" class="mobile_link_bars"><i class="fa-solid fa-bars"></i></a>
                 <a href="#" class="mobile_link_xmark"><i class="fa-solid fa-xmark"></i></a>
             </div>
@@ -110,11 +108,11 @@
                     </div>
 
                     <div class="content_started_button">
-                        <a href="#ABOUT">
+                        <a href="#about">
                             ABOUT ME
                             <i class="fa-solid fa-angle-right"></i>
                         </a>
-                        <a href="#ABOUT"><i class="fa-solid fa-angle-down"></i></a>
+                        <a href="#about"><i class="fa-solid fa-angle-down"></i></a>
                     </div>
 
                 </div>
@@ -123,7 +121,7 @@
 
 
         <!-- About me -->
-        <div id="ABOUT" class="wrapper_container">
+        <div id="about" class="wrapper_container">
             <div class="content_About">
                 <div class="content_title">
                     <h1>About Me</h1>
@@ -266,7 +264,7 @@
 
 
         <!-- Experience -->
-        <div class="wrapper_container">
+        <div id="resume" class="wrapper_container">
             <div class="content_experience">
                 <div class="content_title">
                     <h1>Experience</h1>
@@ -702,7 +700,7 @@
 
 
         <!-- Portfolio -->
-        <div class="wrapper_container">
+        <div id="portfolio" class="wrapper_container">
             <div class="content_Portfolio">
                 <div class="content_title">
                     <h1>Portfolio</h1>
@@ -710,79 +708,84 @@
                 </div>
 
                 <div class="portfolio_menu">
-                    <div class="btn_menu">ALL</div>
-                    <div class="btn_menu">Video</div>
-                    <div class="btn_menu">Music</div>
-                    <div class="btn_menu">Links</div>
-                    <div class="btn_menu">Image</div>
+                    <div class="btn_menu all">ALL</div>
+                    <div class="btn_menu videos">Video</div>
+                    <div class="btn_menu musics">Music</div>
+                    <div class="btn_menu links">Links</div>
+                    <div class="btn_menu images">Image</div>
                 </div>
 
                 <div class="box_element">
-                    <div class="portfolio_list">
-                        <div class="portfolio_item">
-                            <div class="portfolio_img">
-                                <div class="overlay">
-                                    <img class="img_full" src="./ASSETS/IMAGE/Portfolio_img_01.jpg" alt="">
-                                </div>
-                                <div class="content_img">
-                                    <img src="./ASSETS/IMAGE/Portfolio_img_01.jpg" alt="">
-                                    <div class="portfolio_icon"><i class="fa-solid fa-image"></i></div>
-                                </div>
+                    <div class="portfolio_item image">
+                        <div class="portfolio_img">
+                            <div class="overlay">
+                                <img class="img_full" src="./ASSETS/IMAGE/Portfolio_img_01.jpg" alt="">
                             </div>
-                            <div class="portfolio_text">
-                                <span>IMAGE</span>
-                                <h3>White Rose Photo</h3>
+                            <div class="content_img">
+                                <img src="./ASSETS/IMAGE/Portfolio_img_01.jpg" alt="">
+                                <div class="portfolio_icon"><i class="fa-solid fa-image"></i></div>
                             </div>
                         </div>
+                        <div class="portfolio_text">
+                            <span>IMAGE</span>
+                            <h3>White Rose Photo</h3>
+                        </div>
+                    </div>
 
-                        <div class="portfolio_item">
-                            <div class="portfolio_img">
-                                <div class="overlay">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jSO-6QEyDH8?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>                                
-                                </div>
-                                <div class="content_img">
-                                    <img src="./ASSETS/IMAGE/Portfolio_img_02.jpg" alt="">
-                                    <div class="portfolio_icon"><i class="fa-solid fa-video"></i></div>
-                                </div>
+                    <div class="portfolio_item video">
+                        <div class="portfolio_img">
+                            <div class="overlay">
+                                <iframe width="560" height="315"
+                                    src="https://www.youtube.com/embed/jSO-6QEyDH8?autoplay=1&mute=1"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
                             </div>
-                            <div class="portfolio_text">
-                                <span>VIDEO</span>
-                                <h3>Honest Company</h3>
+                            <div class="content_img">
+                                <img src="./ASSETS/IMAGE/Portfolio_img_02.jpg" alt="">
+                                <div class="portfolio_icon"><i class="fa-solid fa-video"></i></div>
                             </div>
+                        </div>
+                        <div class="portfolio_text">
+                            <span>VIDEO</span>
+                            <h3>Honest Company</h3>
                         </div>
                     </div>
 
 
-                    <div class="portfolio_list">
-                        <div class="portfolio_item">
-                            <div class="portfolio_img">
-                                <div class="overlay">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tTQbMIZAjZs?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                
-                                </div>
-                                <div class="content_img">
-                                    <img src="./ASSETS/IMAGE/Portfolio_music.jpg" alt="">
-                                    <div class="portfolio_icon"><i class="fa-solid fa-music"></i></div>
-                                </div>
+                    <div class="portfolio_item music">
+                        <div class="portfolio_img">
+                            <div class="overlay">
+                                <iframe width="560" height="315"
+                                    src="https://www.youtube.com/embed/tTQbMIZAjZs?autoplay=1&mute=1"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
                             </div>
-                            <div class="portfolio_text">
-                                <span>NUSIC</span>
-                                <h3>White Rose Photo</h3>
+                            <div class="content_img">
+                                <img src="./ASSETS/IMAGE/Portfolio_music.jpg" alt="">
+                                <div class="portfolio_icon"><i class="fa-solid fa-music"></i></div>
                             </div>
                         </div>
+                        <div class="portfolio_text">
+                            <span>MUSIC</span>
+                            <h3>White Rose Photo</h3>
+                        </div>
+                    </div>
 
-                        <div class="portfolio_item">
-                            <div class="portfolio_img">
-                                <div class="content_img">
-                                    <img src="./ASSETS/IMAGE/Portfolio_link.jpg" alt="">
-                                    <div class="portfolio_icon">
-                                        <a href="https://www.tlu.edu.vn/" target="_blank"><i class="fa-solid fa-link"></i></a>
-                                    </div>
+                    <div class="portfolio_item link">
+                        <div class="portfolio_img">
+                            <div class="content_img">
+                                <img src="./ASSETS/IMAGE/Portfolio_link.jpg" alt="">
+                                <div class="portfolio_icon">
+                                    <a href="https://www.tlu.edu.vn/" target="_blank"><i
+                                            class="fa-solid fa-link"></i></a>
                                 </div>
                             </div>
-                            <div class="portfolio_text">
-                                <span>LINK</span>
-                                <h3>Honest Company</h3>
-                            </div>
+                        </div>
+                        <div class="portfolio_text">
+                            <span>LINK</span>
+                            <h3>Honest Company</h3>
                         </div>
                     </div>
                 </div>
@@ -794,7 +797,7 @@
 
 
         <!-- Contact -->
-        <div id="CONTACT" class="wrapper_container">
+        <div id="contact" class="wrapper_container">
             <div class="content_Contact">
                 <div class="content_title">
                     <h1>Contact</h1>
