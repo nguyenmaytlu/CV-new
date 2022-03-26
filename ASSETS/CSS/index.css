@@ -1,14 +1,13 @@
 
+
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #fff;
     box-sizing: border-box;
     font-weight: 400;
     line-height: 26px;
+    font-size: 16px;
 }
-
-
-
 
 /* header */
 header{
@@ -29,7 +28,7 @@ header{
     object-fit:cover;
 }
 
-.header .background-overlay{
+.header .background_overlay{
     position: absolute;
     top: 0;
     height: 100%;
@@ -42,61 +41,34 @@ header{
     top: 0px;
     padding: 1% 3%;
     width: 94%;
-    /* height: 13%; */
     height: 66px;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     background-color:  rgba(0,0,0,0.4);
     box-shadow: 2px 2px 20px #202020;
-}
-
-.header .logo_Nickname{
-    display: flex;
-    text-shadow: 2px 2px 8px black;
-}
-
-.header .logo_Nickname .logo{
-    width: 50px;
-    height: 50px;
-    margin: auto 0;
-    background-image: linear-gradient(0, red, rgb(247, 100, 16));
-    opacity: 96%;
-}
-
-.header .logo_Nickname .logo img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 100%;
-}
-
-.header .logo_Nickname .Nickname{
-    margin-left: 16px;
-    color: rgba(231, 17, 17, 0.945);
-    font-weight: 400;
 }
 
 .header .menu{
     display: flex;
 }
 
-.header .menu .menu-item{
+.header .menu .menu_item{
     margin: auto 0 auto 40px;
 }
 
-.header .menu .menu-item >a:hover
+.header .menu .menu_item >a:hover
 {
     color: #68e0cf;
 }
 
-.header .menu .menu-item a{
+.header .menu .menu_item a{
     position: relative;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
 }
 
-.header .menu .menu-item ul{
+.header .menu .menu_item ul{
     display: none;
     position: absolute;
     z-index: 3;
@@ -108,29 +80,29 @@ header{
     opacity: 86%;
 }
 
-.header .menu .menu-item:hover ul{
+.header .menu .menu_item:hover ul{
     display: block;
 }
 
-.header .menu .menu-item ul li{
+.header .menu .menu_item ul li{
     font-size: 13px;
     padding: 10px;
     border-bottom: 1px solid #757575;
 }
 
-.header .menu .menu-item ul li:last-child{
+.header .menu .menu_item ul li:last-child{
     border-bottom: 0;
 }
 
-.header .menu .menu-item ul li a{
+.header .menu .menu_item ul li a{
     display: block;
 }
 
-.header .menu .menu-item ul a:hover{
+.header .menu .menu_item ul a:hover{
     color: #68e0cf;
 }
 
-.header .menu .menu-item:first-child ul::before{
+.header .menu .menu_item:first-child ul::before{
     content: "";
     position: absolute;
     border: 10px solid ;
@@ -139,7 +111,7 @@ header{
     top: -20px;
 }
 
-.header .menu .menu-item:first-child ul::after{
+.header .menu .menu_item:first-child ul::after{
     content: "";
     position: absolute;
     width: 66px;
@@ -149,17 +121,16 @@ header{
     top: -16px;
 }
 
-.header .group-photo{
+.header .group_photo{
     position: absolute;
     z-index: 2;
-    /* top: 21%; */
-    top: 106px;
+    top: calc(50% - 21%);
     width: 100%;
     height: 26%;
     text-align: center;
 }
 
-.header .group-photo img{
+.header .group_photo img{
     height: 97%;
     object-fit:contain;
     border: 2px solid #1f796d;
@@ -176,8 +147,7 @@ header{
     color: #fff;
     font-weight: 600;
     font-size: 30px;
-    animation: growth-groupName-icon 1s ease-out forwards;
-
+    animation: growth 1s ease-out forwards;
 }
 
 .header .icon{
@@ -199,10 +169,10 @@ header{
 .header .icon i{
     font-size: 20px;
     color: rgb(221, 221, 221);
-    animation: growth-groupName-icon 1s ease-out forwards;
+    animation: growth 1s ease-out forwards;
 }
 
-@keyframes growth-groupName-icon{
+@keyframes growth{
     0%{
         opacity: 0;
         transform: scale(0.6);
@@ -217,9 +187,9 @@ header{
 
 /* main */
 
-.container-introduce,
-.container-contact,
-.container-footer {
+.container_introduce,
+.container_contact,
+.container_footer {
     display: flex;
     justify-content: center;
 }
@@ -239,50 +209,50 @@ header{
     color: #5e5d5d;
 }
 
-.container-introduce .content .content-information{
+.container_introduce .content .content_information{
     display: flex;
 }
 
-.container-introduce .content .content-information .avatar{
+.container_introduce .content .content_information .avatar{
     width: 50%;
 }
 
-.container-introduce .content .content-information .avatar img{
+.container_introduce .content .content_information .avatar img{
     width: 100%;
     height: 100%;
 }
 
-.container-introduce .content .content-information .basic-information{
+.container_introduce .content .content_information .basic_information{
     width: 48%;
     margin-left: 2%;
     display: flex;
     align-items: center;
 }
 
-.container-introduce .content #phuong .basic-information div,
-.container-introduce .content #hoang .basic-information div{
+.container_introduce .content #phuong .basic_information div,
+.container_introduce .content #hoang .basic_information div{
     --margin-left-old : 100px;
     --margin-left-new : 0;
-    animation: change-margin-left 2s;
+    animation: change_margin_left 2s;
 }
 
-.container-introduce .content #may .basic-information{
+.container_introduce .content #may .basic_information{
     margin: 0 2% 0 0;
     text-align: end;
     justify-content: end;
 }
 
-.container-introduce .content #may .basic-information div{
+.container_introduce .content #may .basic_information div{
     --margin-right-old: 100px;
     --margin-right-new: 0;
-    animation: change-margin-right 2s;
+    animation: change_margin_right 2s;
 }
 
-.container-introduce .content .content-information .basic-information h1{
+.container_introduce .content .content_information .basic_information h1{
     font-size: 26px;
 }
 
-@keyframes change-margin-left{
+@keyframes change_margin_left{
     0%{
         opacity: 0;
         margin-left: var(--margin-left-old);
@@ -293,7 +263,7 @@ header{
     }
 }
 
-@keyframes change-margin-right{
+@keyframes change_margin_right{
     0%{
         opacity: 0;
         margin-right: var(--margin-right-old);
@@ -308,25 +278,25 @@ header{
 
 
 /* contact */
-.container-contact .content>div{
+.container_contact .content>div{
     display: flex;
 }
 
-.container-contact .information{
+.container_contact .information{
     width: 40%;
     margin-right: 20px;
     --margin-left-old: 90px;
     --margin-left-new: 0;
-    animation: change-margin-left 2s ease-out;
+    animation: change_margin_left 2s ease-out;
     /* animation-fill-mode: both; */
 }
 
-.container-contact .communications{
+.container_contact .communications{
     display: flex;
     flex-direction: column;
 }
 
-.container-contact .communications a{
+.container_contact .communications a{
     text-decoration: none;
     color: #575757;
     font-size: 14px;
@@ -334,26 +304,25 @@ header{
     margin-bottom: 4px;
 }
 
-.container-contact .communications a i{
+.container_contact .communications a i{
     margin-right: 10px;
     color: #929292;
 }
 
-.container-contact .communications a:hover i{
+.container_contact .communications a:hover i{
     font-size: 19px;
     color: #1f796d;
 }
 
-
-.container-contact form{
+.container_contact form{
     margin-top: 9%;
 }
 
-.container-contact form input,
-.container-contact form textarea,
-.container-contact form button{
+.container_contact form input,
+.container_contact form textarea,
+.container_contact form button{
     display: block;
-    width: 94.5%;
+    width: 93.5%;
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 3px;
@@ -362,9 +331,9 @@ header{
     outline-color: #53b3a6;
 }
 
-.container-contact form button{
+.container_contact form button{
     margin-bottom: 0;
-    width: 100%;
+    width: 99%;
     font-weight: 600;
     color: #575757;
     background-color: #68e0cf;
@@ -373,11 +342,11 @@ header{
     cursor: pointer;
 }
 
-.container-contact form button:hover{
+.container_contact form button:hover{
     box-shadow: 1px 1px 7px #acabab;
 }
 
-.container-contact .content .map{
+.container_contact .content .map{
     width: 60%;
     margin-left: 20px;
     display: flex;
@@ -385,30 +354,18 @@ header{
     align-items: center;
 }
 
-.container-contact .content .map iframe{
+.container_contact .content .map iframe{
     width: 100%;
     height: 100%;
     object-fit: contain;
-    animation: growth-map 1s ease-out;
+    animation: growth 1s ease-out;
     /* animation-fill-mode: both; */
 }
-
-@keyframes growth-map{
-    0%{
-        opacity: 0;
-        transform: scale(0.7);
-    }
-    100%{
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
 
 
 /* footer */
 
-.container-footer .content{
+.container_footer .content{
     padding-top: 0;
     text-align: center;
     color: #757575;
@@ -416,28 +373,200 @@ header{
     box-shadow: none;
 }
 
-
-.container-footer .content .groupName{
+.container_footer .content .groupName{
     margin: 20px;
     font-size: 24px;
     font-weight: 600;
 }
 
-.container-footer .icon{
+.container_footer .icon{
     display: flex;
     justify-content: center;
     margin: 20px;
 }
 
-.container-footer .icon div{
+.container_footer .icon div{
     margin: 0 5px;
 }
 
-.container-footer .icon div a{
+.container_footer .icon div a{
     color: #757575;
     font-size: 16px;
 }
 
-.container-footer .content span{
+.container_footer .content span{
     border-bottom: 1px dashed #757575;
+}
+
+
+
+/* tablet */
+@media(min-width: 740px) and (max-width: 1066px)
+{
+
+    /* header */
+
+    .header nav{
+        height: 59px;
+    }
+
+    .header .groupName{
+        font-size: 19px;
+        bottom: 21%;
+    }
+
+    .header .icon i{
+        font-size: 13px;
+    }
+
+    .container_introduce .content .content_information .basic_information h1 {
+        font-size: 24px;
+    }
+
+}
+
+
+
+/* mobile */
+
+@media(max-width: 740px){
+    .header nav {
+        height: auto;
+        width: 100%;
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+
+    .header .menu{
+        /* transform: scale(0); */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10%;
+        background-color: #575757;
+    }
+
+    .header .menu .menu_item{
+        margin: 2% auto;
+        text-align: center;
+    }
+
+    .header .menu .menu_item ul{
+        display: block;
+        position: relative;
+        margin-top: 16px;
+        top: 0;
+    }
+
+    .header .menu .menu_item:first-child ul::before{
+        left: calc(50% - 10px);
+    }
+
+
+
+    .header .groupName{
+        font-size: 12px;
+        bottom: 19%;
+    }
+
+    .header .icon a{
+        margin: 0 2px;
+    }
+
+    .header .icon{
+        bottom: 9%;
+    }
+
+    .header .icon i{
+        font-size: 9px;
+    }
+
+
+
+    /* main */
+    .content{
+        padding: 20px;
+    }
+
+    .content h1{
+        font-size: 26px;
+        margin-bottom: 6%;
+    }
+
+    .container_introduce .content .content_information{
+        font-size: 13px;
+        flex-direction: column;
+        margin-bottom: 11%;
+    }
+
+    .container_introduce .content .content_information .avatar{
+        width: 100%;
+    }
+
+    .container_introduce .content .content_information .basic_information h1{
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .container_introduce .content .content_information .basic_information{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .container_introduce #may{
+        flex-direction: column-reverse;
+    }
+
+    .container_introduce .content #may .basic_information{
+        text-align: start;
+        justify-content: start;
+        margin: 0;
+    }
+
+
+    /* contact */
+
+    .container_contact .content>div{
+        flex-direction: column;
+    }
+
+    .container_contact .information{
+        width: 100%;
+        margin: 0 0 15% 0;
+    }
+
+    .container_contact .content .map{
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+
+    /* footer */
+
+    .container_footer .content{
+        font-size: 9px;
+    }
+
+    .container_footer .content .groupName{
+        font-size: 16px;
+        margin: 10px 0 0 0 ;
+    }
+
+    .container_footer .icon{
+        margin: 0;
+    }
+
+    .container_footer .icon div a{
+        font-size: 10px;
+    }
+
+
 }

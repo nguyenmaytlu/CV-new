@@ -1,10 +1,5 @@
 
 /* CSS full container*/
-:root{
-    --white-color: #fff;
-    --green-color: #68e0cf;
-    --primary-color: #373b40;
-}
 
 ::placeholder{
     color: #697880;
