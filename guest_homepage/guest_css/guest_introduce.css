@@ -1,3 +1,7 @@
+html{
+    /* hiệu ứng cuộn chuột mượt */
+    scroll-behavior: smooth;        
+}
 
 
 body{
@@ -33,27 +37,32 @@ header{
     top: 0;
     height: 100%;
     width: 100%;
-    background-color:  rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.7);
 }
 
 .header nav{
     position: absolute;
+    display: flex;
+    align-items: center;
     top: 0px;
     padding: 1% 3%;
     width: 94%;
     height: 66px;
-    display: flex;
-    align-items: center;
-    background-color:  rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.4);
     box-shadow: 2px 2px 20px #202020;
+}
+
+.navbar_menu_mobile{
+    display: none;
 }
 
 .header .menu{
     display: flex;
+    align-items: center;
 }
 
 .header .menu .menu_item{
-    margin: auto 0 auto 40px;
+    margin: 0 0 0 40px;
 }
 
 .header .menu .menu_item >a:hover
@@ -226,30 +235,48 @@ header{
     width: 48%;
     margin-left: 2%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container_introduce .content .content_information .basic_information span{
+    color: #2f9b8c;
+    font-weight: 600;
+}
+
+.container_introduce .content .content_information .basic_information a{
+    display: inline-block;
+    padding: 1% 3%;
+    margin-top: 9%;
+    text-decoration: none;
+    color: #fff;
+    background-color: #929292;
+    border-radius: 9px;
+}
+
+.container_introduce .content .content_information .basic_information a:hover{
+    cursor: pointer;
+    background-color: #68e0cf;
+    border: 1px solid #929292;
 }
 
 .container_introduce .content #phuong .basic_information div,
 .container_introduce .content #hoang .basic_information div{
-    --margin-left-old : 100px;
+    --margin-left-old : 90px;
     --margin-left-new : 0;
     animation: change_margin_left 2s;
+
 }
 
 .container_introduce .content #may .basic_information{
     margin: 0 2% 0 0;
     text-align: end;
-    justify-content: end;
 }
 
 .container_introduce .content #may .basic_information div{
-    --margin-right-old: 100px;
+    --margin-right-old: 90px;
     --margin-right-new: 0;
     animation: change_margin_right 2s;
-}
-
-.container_introduce .content .content_information .basic_information h1{
-    font-size: 26px;
 }
 
 @keyframes change_margin_left{
@@ -288,7 +315,6 @@ header{
     --margin-left-old: 90px;
     --margin-left-new: 0;
     animation: change_margin_left 2s ease-out;
-    /* animation-fill-mode: both; */
 }
 
 .container_contact .communications{
@@ -318,22 +344,35 @@ header{
     margin-top: 9%;
 }
 
+.container_contact .form_element{
+    margin-bottom: 20px;
+}
+
 .container_contact form input,
 .container_contact form textarea,
 .container_contact form button{
     display: block;
-    width: 93.5%;
-    margin-bottom: 20px;
-    padding: 10px;
+    font-size: 14px;
+    width: 96%;
+    padding: 2%;
     border-radius: 3px;
     border: 1px solid #acabab;
-    font-size: 14px;
     outline-color: #53b3a6;
 }
 
+.empty_error,
+.invalid_email_error{
+    color: red;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+
+
 .container_contact form button{
     margin-bottom: 0;
-    width: 99%;
+    width: 100%;
+    margin: 0 auto;
     font-weight: 600;
     color: #575757;
     background-color: #68e0cf;
@@ -359,7 +398,6 @@ header{
     height: 100%;
     object-fit: contain;
     animation: growth 1s ease-out;
-    /* animation-fill-mode: both; */
 }
 
 
@@ -430,32 +468,41 @@ header{
 /* mobile */
 
 @media(max-width: 740px){
+    html{
+        /* hiệu ứng cuộn chuột mượt */
+        scroll-behavior: auto;        
+    }
+
     .header nav {
         height: auto;
         width: 100%;
         padding: 0;
         background-color: transparent;
         box-shadow: none;
+        justify-content: flex-end;
     }
 
-
     .header .menu{
-        /* transform: scale(0); */
         position: fixed;
         top: 0;
         left: 0;
         z-index: 10;
-        height: 100%;
+        height: 0;
         width: 100%;
         display: flex;
         flex-direction: column;
-        padding-top: 10%;
         background-color: #575757;
+        overflow: hidden;
+        transition: 1s;
     }
 
     .header .menu .menu_item{
         margin: 2% auto;
         text-align: center;
+    }
+
+    .header .menu .menu_item:first-child{
+        margin-top: 10%;
     }
 
     .header .menu .menu_item ul{
@@ -469,7 +516,33 @@ header{
         left: calc(50% - 10px);
     }
 
+    .navbar_menu_mobile{
+        display: block;
+        margin-right: 10px;
+    }
 
+    .navbar_menu_mobile a{
+        position: relative;
+        z-index: 100;
+        display: inline-block;
+        border: 1px solid #acabab;
+    }
+
+    .navbar_menu_mobile .mobile_link_bars{
+        padding: 8px 16px;
+        border-radius: 100%;
+    }
+
+    .navbar_menu_mobile .mobile_link_xmark{
+        padding: 7px 17px;
+        border-radius: 100%;
+        display: none;
+    }
+
+    .navbar_menu_mobile i{
+        font-size: 13px;
+        color: #fff;
+    }
 
     .header .groupName{
         font-size: 12px;
@@ -503,7 +576,7 @@ header{
     .container_introduce .content .content_information{
         font-size: 13px;
         flex-direction: column;
-        margin-bottom: 11%;
+        margin-bottom: 14%;
     }
 
     .container_introduce .content .content_information .avatar{
@@ -530,6 +603,20 @@ header{
         margin: 0;
     }
 
+    .container_introduce .content #phuong .basic_information div,
+    .container_introduce .content #hoang .basic_information div,
+    .container_introduce .content #may .basic_information div{
+        --margin-left-old : 30px;
+        --margin-left-new : 0;
+        animation: change_margin_left 2s;
+    }
+
+    .container_introduce .content .content_information .basic_information a{
+        padding: 1% 3%;
+        margin-top: 4%;
+    }
+
+
 
     /* contact */
 
@@ -540,6 +627,9 @@ header{
     .container_contact .information{
         width: 100%;
         margin: 0 0 15% 0;
+        --margin-left-old: 30px;
+        --margin-left-new: 0;
+        animation: change_margin_left 2s ease-out;
     }
 
     .container_contact .content .map{

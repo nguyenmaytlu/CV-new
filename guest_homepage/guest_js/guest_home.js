@@ -9,14 +9,14 @@ var mobile_link_xmark = document.querySelector(".mobile_link_xmark")
 var navbar_item_link = document.querySelectorAll(".navbar_item_link")
 
 // bắt sự kiện click vào nút bars hiện ra navbar
-click_display_menu[0].addEventListener("click",function(){
+mobile_link_bars.addEventListener("click",function(){
     navbar_list.classList.toggle("display_block")
     mobile_link_bars.style.display = "none"
     mobile_link_xmark.style.display = "block"
 })
 
 // bắt sự kiện click vào nút xmark hiện ra navbar
-click_display_menu[1].addEventListener("click",function(){
+mobile_link_xmark.addEventListener("click",function(){
     navbar_list.classList.toggle("display_block")
     mobile_link_bars.style.display = "block"
     mobile_link_xmark.style.display = "none"
@@ -236,36 +236,36 @@ var submit = document.querySelector(".content_Contact button")
 var form = document.querySelector(".content_Contact form")
 
 // hàm kiểm tra xem value = "" không
-function checkForEmptyValue(element,emptyError1) {
+function checkForEmptyValue(element,empty_error) {
     if (element.value.trim() == "") {
         element.style.borderBottomColor = "red"
-        emptyError1.textContent = "Please fill out this field"
+        empty_error.textContent = "Please fill out this field"
         element.classList.add("error")
     }
     else {
         element.style.borderBottomColor = "#68e0cf"
-        emptyError1.textContent = ""
+        empty_error.textContent = ""
         element.classList.remove("error")
     }
 }
 
 
 // hàm kiểm tra xem email có hợp lệ hay không
-function checkEmail(element,invalidError){
+function checkEmail(element,invalid_error){
     var reg = /^\w+@[a-zA-Z]+\.com$/i
     if (element.value.trim() == "") {
         element.style.borderBottomColor = "red"
-        invalidError.textContent = "Please fill out this field"
+        invalid_error.textContent = "Please fill out this field"
         element.classList.add("error")
     }
     else if (reg.test(element.value)) {
         element.style.borderBottomColor = "#68e0cf"
-        invalidError.textContent = ""
+        invalid_error.textContent = ""
         element.classList.remove("error")
     }
     else{
         element.style.borderBottomColor = "red"
-        invalidError.textContent = "Invalid email"
+        invalid_error.textContent = "Invalid email"
         element.classList.add("error")
     }
 }
@@ -295,10 +295,10 @@ submit.addEventListener("click", function (e){
     checkEmail(input_email_Contact, invalid_email_error)
 
     var error = document.querySelectorAll(".content_Contact .error")
+
     if(error.length == 0){
         form.innerHTML = "<div>Thanks, your message is sent successfully.</div>"
         var feedback = document.querySelector(".content_Contact form div")
-        console.log(feedback)
         feedback.style.marginTop = "60px"
         feedback.style.color = "white"
         feedback.style.fontSize = "13px"

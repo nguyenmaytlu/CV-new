@@ -8,7 +8,7 @@
     <title>Home</title>
 
     <!-- reset-->
-    <link rel="stylesheet" href="./ASSETS/CSS/reset.css">
+    <link rel="stylesheet" href="./guest_css/reset.css">
 
     <!-- font chữ -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./ASSETS/CSS/index.css">
+    <link rel="stylesheet" href="./guest_css/guest_introduce.css">
 
 </head>
 
@@ -27,14 +27,14 @@
     <!-- header -->
     <header>
         <div class="header">
-            <img src="./ASSETS/IMAGE/header-background-index.jpg" alt="background-index">
+            <img src="./guest_images/background-introduce.jpg" alt="background-index">
             <div class="background_overlay"></div>
             <nav>
                 <ul class="menu">
                     <li class="menu_item">
                         <a href="">Home <i class="fa-solid fa-angle-down"></i></a>
                         <ul>
-                            <li><a href="home1.html">Home1</a></li>
+                            <li><a href="guest_home1.html">Home1</a></li>
                             <li><a href="">Home2</a></li>
                             <li><a href="">Home3</a></li>
                         </ul>
@@ -42,10 +42,15 @@
                     <li class="menu_item"><a href="#introduce">Introduce</a></li>
                     <li class="menu_item"><a href="#contact">Contact</a></li>
                 </ul>
+
+                <div class="navbar_menu_mobile">
+                    <a href="#" class="mobile_link_bars"><i class="fa-solid fa-bars"></i></a>
+                    <a href="#" class="mobile_link_xmark"><i class="fa-solid fa-xmark"></i></a>
+                </div>
             </nav>
 
             <div class="group_photo">
-                <img src="./ASSETS/IMAGE/background_grounp07.jpg" alt="">
+                <img src="./guest_images/background_grounp07.jpg" alt="">
             </div>
 
             <div class="groupName">
@@ -89,35 +94,35 @@
 
                 <div class="content_information" id="phuong">
                     <div class="avatar">
-                        <img src="./ASSETS/IMAGE/phuong_index.jpg" alt="avatar">
+                        <img src="./guest_images/phuong_introduce.jpg" alt="avatar">
                     </div>
                     <div class="basic_information">
-                        <div>
-                            <h1>Nguyễn Thị Hà Phương</h1>
-                            <p>Sinh viên năm 3 trường đại học thủy lợi</p>
-                        </div>
+                        <div><span>Họ tên: </span> Nguyễn Thị Hà Phương </div>
+                        <div><span>MSV: </span> 2051062222</div>
+                        <div><span>Lớp: </span> 62TH1</div>
+                        <div><a href="#">detail</a></div>     
                     </div>
                 </div>
                 <div class="content_information" id="may">
                     <div class="basic_information">
-                        <div>
-                            <h1>Nguyễn Thị Mây</h1>
-                            <p>Sinh viên năm 3 trường đại học thủy lợi</p>
-                        </div>
+                        <div><span>Họ tên: </span> Nguyễn Thị Mây </div>
+                        <div><span>MSV: </span> 2051063448</div>
+                        <div><span>Lớp: </span> 62TH1</div>
+                        <div><a href="#">detail</a></div> 
                     </div>
                     <div class="avatar">
-                        <img src="./ASSETS/IMAGE/may_index.jpg" alt="avatar">
+                        <img src="./guest_images/may_introduce.jpg" alt="avatar">
                     </div>
                 </div>
                 <div class="content_information" id="hoang">
                     <div class="avatar">
-                        <img src="./ASSETS/IMAGE/hoang_index.jpg" alt="avatar">
+                        <img src="./guest_images/hoang_introduce.jpg" alt="avatar">
                     </div>
                     <div class="basic_information">
-                        <div>
-                            <h1>Nguyễn Việt Hoàng</h1>
-                            <p>Sinh viên năm 3 trường đại học thủy lợi</p>
-                        </div>
+                        <div><span>Họ tên: </span> Nguyễn Việt Hoàng </div>
+                        <div><span>MSV: </span> 2051062222</div>
+                        <div><span>Lớp: </span> 62TH1</div>
+                        <div><a href="#">detail</a></div>  
                     </div>
                 </div>
             </div>
@@ -144,9 +149,21 @@
                         </div>
 
                         <form action="">
-                            <input type="text" placeholder="Name">
-                            <input type="email" placeholder="Email address">
-                            <textarea name="" id="" rows="6" placeholder="Message"></textarea>
+                            <div class="form_element">
+                                <input type="text" placeholder="Name" class="input_contact error">
+                                <div class="empty_error"></div>
+                            </div>
+                            
+                            <div class="form_element">
+                                <input type="email" placeholder="Email address" class="input_email_contact error">
+                                <div class="invalid_email_error"></div>
+                            </div>
+                            
+                            <div class="form_element">
+                                <textarea name="" id="" rows="6" placeholder="Message" class="input_contact error"></textarea>
+                                <div class="empty_error"></div>
+                            </div>
+                            
                             <button type="submit">SEND</button>
                         </form>
                     </div>
@@ -199,6 +216,7 @@
     </main>
 
 
+    <script src="./guest_js/guest_introduce.js"></script>
 </body>
 
 </html>
